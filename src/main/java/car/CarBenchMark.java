@@ -14,10 +14,10 @@ public class CarBenchMark {
         System.out.println("------------------------");
     }
 
-    public static List<Car> getCarsWithColor(Iterable<Car> carList, String color){
+    public static List<Car> getCarsWithCriteria(Iterable<Car> carList, Criteria criteria){
         List<Car> outputCarList = new ArrayList<Car>();
         for(Car car : carList){
-            if(car.getColor().equals(color))
+            if(criteria.test(car))
                 outputCarList.add(car);
         }
         return outputCarList;
@@ -31,8 +31,7 @@ public class CarBenchMark {
                 Car.carWithGasColorPassengers(6, "Red", "Ender", "Hyrum", "Locke", "Bonzo")
         );
         showAll(cars);
-        showAll(getCarsWithColor(cars, "Black"));
-        showAll(cars);
+        showAll(getCarsWithCriteria(cars, new ColorCriteria()));
 
     }
 }
