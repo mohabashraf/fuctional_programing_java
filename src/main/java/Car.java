@@ -17,7 +17,7 @@ public class Car {
         this.trunkContent = trunkContent;
     }
 
-    public static Car carWithGasLevel(int gasLevel, String color, String... passenger){
+    public static Car carWithGasColorPassengers(int gasLevel, String color, String... passenger){
         List<String> passengers = Collections.unmodifiableList(Arrays.asList(passenger));
         return new Car(color, gasLevel, passengers, null);
     }
