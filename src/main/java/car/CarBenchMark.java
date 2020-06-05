@@ -32,6 +32,7 @@ public class CarBenchMark {
         );
         showAll(cars);
         showAll(getCarsWithCriteria(cars, new ColorCriteria()));
-
+        cars.sort(new CarCompareByPassengerSize());
+        showAll(cars);
     }
 }
