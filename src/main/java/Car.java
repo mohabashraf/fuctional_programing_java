@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Car {
@@ -14,6 +17,10 @@ public class Car {
         this.trunkContent = trunkContent;
     }
 
+    public static Car carWithGasLevel(int gasLevel, String color, String... passenger){
+        List<String> passengers = Collections.unmodifiableList(Arrays.asList(passenger));
+        return new Car(color, gasLevel, passengers, null);
+    }
 
 
 }
