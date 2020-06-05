@@ -1,4 +1,5 @@
-import java.lang.reflect.Array;
+package car;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -29,7 +30,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
+        return "car.Car{" +
                 "color='" + color + '\'' +
                 ", gasLevel=" + gasLevel +
                 ", passenger=" + passenger +
