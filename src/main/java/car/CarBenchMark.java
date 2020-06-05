@@ -14,7 +14,7 @@ public class CarBenchMark {
         System.out.println("------------------------");
     }
 
-    public static List<Car> getCarsWithColor(List<Car> carList, String color){
+    public static Iterable<Car> getCarsWithColor(Iterable<Car> carList, String color){
         List<Car> outputCarList = new ArrayList<Car>();
         for(Car car : carList){
             if(car.getColor().equals(color))
