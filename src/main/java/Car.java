@@ -27,5 +27,29 @@ public class Car {
         return new Car(color, gasLevel, passengers, Arrays.asList("spare wheel", "wrench"));
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "color='" + color + '\'' +
+                ", gasLevel=" + gasLevel +
+                ", passenger=" + passenger +
+                ", trunkContent=" + trunkContent +
+                '}';
+    }
 
+    public String getColor() {
+        return color;
+    }
+
+    public int getGasLevel() {
+        return gasLevel;
+    }
+
+    public List<String> getPassenger() {
+        return passenger;
+    }
+
+    public List<String> getTrunkContent() {
+        return trunkContent;
+    }
 }
