@@ -22,5 +22,10 @@ public class Car {
         return new Car(color, gasLevel, passengers, null);
     }
 
+    public static Car carWithGasColorPassengersTrunkContent(int gasLevel, String color, String... passenger){
+        List<String> passengers = Collections.unmodifiableList(Arrays.asList(passenger));
+        return new Car(color, gasLevel, passengers, Arrays.asList("spare wheel", "wrench"));
+    }
+
 
 }
