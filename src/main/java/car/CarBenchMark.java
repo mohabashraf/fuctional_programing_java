@@ -1,5 +1,6 @@
 package car;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
@@ -10,8 +11,17 @@ public class CarBenchMark {
         for (Car car:carList) {
             System.out.println(car.toString());
         }
+        System.out.println("------------------------");
     }
 
+    public static List<Car> getCarsWithColor(List<Car> carList, String color){
+        List<Car> outputCarList = new ArrayList<Car>();
+        for(Car car : carList){
+            if(car.getColor().equals(color))
+                outputCarList.add(car);
+        }
+        return outputCarList;
+    }
     public static void main(String[] args) {
         List<Car> cars = Arrays.asList(
                 Car.carWithGasColorPassengers(6, "Red", "Fred", "Jim", "Sheila"),
@@ -21,5 +31,8 @@ public class CarBenchMark {
                 Car.carWithGasColorPassengers(6, "Red", "Ender", "Hyrum", "Locke", "Bonzo")
         );
         showAll(cars);
+        showAll(getCarsWithColor(cars, "Black"));
+        showAll(cars);
+
     }
 }
